@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soccer Tactical Analysis AI
+
+An advanced soccer tactical analysis tool powered by Google's Gemini 2.0 Flash AI model. This application automatically analyzes soccer footage and generates detailed tactical reports, including formation analysis, key moments, and player highlights.
+
+## Features
+
+- 🎥 Video Analysis: Upload your own soccer footage or use preset videos
+- 📊 Comprehensive Reports: Get detailed tactical breakdowns including:
+  - Overall tactical situation summary
+  - Formation analysis with strengths and weaknesses
+  - Key tactical moments with timestamps
+  - Individual player highlights
+  - Suggested tactical improvements
+- 🚀 Powered by Google's Gemini 2.0 Flash AI
+- 💾 Google Cloud Storage integration for file handling
+- ⚡ Built with Next.js 14 and TypeScript
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+1. Node.js 18.17 or later
+2. PNPM package manager
+3. Google Cloud credentials:
+   - Google Generative AI API key
+   - Google Cloud Storage credentials
+
+### Environment Setup
+
+Create a `.env.local` file in the root directory with the following variables:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
+GOOGLE_CLOUD_PROJECT_ID=your_project_id
+GOOGLE_CLOUD_PRIVATE_KEY=your_private_key
+GOOGLE_CLOUD_CLIENT_EMAIL=your_client_email
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+pnpm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run the development server
+pnpm dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Upload a soccer video file (max 20MB) or select a preset video
+2. Wait for the AI analysis to complete
+3. View the comprehensive tactical report including:
+   - Formation analysis
+   - Key tactical moments
+   - Player highlights
+   - Suggested improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technical Stack
 
-## Deploy on Vercel
+- **Frontend**: Next.js 14, TypeScript, Tailwind CSS
+- **AI**: Google Gemini 2.0 Flash
+- **Storage**: Google Cloud Storage
+- **API**: Next.js API Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT License](LICENSE)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
